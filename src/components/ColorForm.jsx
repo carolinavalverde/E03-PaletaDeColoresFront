@@ -16,21 +16,21 @@ const ColorForm = ({ addColor }) => {
 
   return (
     <form
-      className="container bg-primary-subtle my-2 p-3"
+      className="container bg-success-subtle my-2 p-3"
       onSubmit={handleSubmit}
     >
       <div className="container d-flex">
         <div
-          className="container card col-lg-3 col-md-3 col-sm-1"
+          className="container card col-lg-3 col-md-3 col-sm-1 mx-0 my-4"
           style={{
             backgroundColor: `${color}`,
-            height: "160px",
-            width: "160px",
+            height: "200px",
+            width: "200px",
           }}
         ></div>
         <label className="container col-lg-7 col-md-7 col-sm-5 ms-3">
           <input
-            className="rounded p-2 form-control"
+            className="rounded p-2 my-4 form-control"
             type="text"
             value={color}
             onChange={handleColorChange}
@@ -39,7 +39,7 @@ const ColorForm = ({ addColor }) => {
         </label>
       </div>
       <div className="container d-flex justify-content-end">
-        <button className="btn btn-primary my-2" type="submit">
+        <button className="btn btn-success p-3 my-2" type="submit">
           Guardar
         </button>
       </div>
