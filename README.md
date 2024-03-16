@@ -1,4 +1,4 @@
-## **Color Palette App**
+## **Paleta de Colores**
 
 ## 1. Descripción
 Esta aplicación web, desarrollada con React, utiliza la biblioteca de diseño Bootstrap para crear una intuitiva y atractiva paleta de colores. La aplicación permite a los usuarios explorar, seleccionar y copiar códigos de color de una amplia variedad de opciones.
@@ -22,8 +22,12 @@ Bootstrap v5.3.2: Utilización de componentes y estilos predefinidos para un dis
 
 JavaScript: Programación del comportamiento dinámico de la aplicación.
 
+JsonServer
+
+SweetAlert
+
 ## 5. Instalación y Uso
-Clona el repositorio: git clone https://github.com/tu-usuario/ReactEj06.git
+Clona el repositorio: git clone https://github.com/carolinavalverde/E03-PaletaDeColoresFront
 Navega al directorio del proyecto: cd ReactEj06
 Instala las dependencias: npm install
 Inicia la aplicación: npm start
@@ -43,5 +47,3 @@ Carolina Valverde Vasile
 
 ## 8.Licencia
 Este proyecto no cuenta con licencia.
-
-¡Esperamos que disfrutes explorando colores y creando combinaciones vibrantes con nuestra Color Palette App! Si tienes alguna pregunta o sugerencia, no dudes en abrir un problema (issue) o contactarnos. ¡Gracias por tu interés y contribuciones!# Backend0304

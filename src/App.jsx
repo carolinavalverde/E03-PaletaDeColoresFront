@@ -34,11 +34,11 @@ const App = () => {
   return (
     <section className="container-fluid bg-dark-subtle">
       <div className="bg-dark text-bg-dark text-center p-3 mb-2">
-        <h1>Color Palette</h1>
+        <h1>Paleta de Colores</h1>
       </div>
       <div className="container d-flex justify-content-center card card-body shadow">
         <div className="my-2">
-          <span>Administrar colores</span>
+          <span className="display-6">Ingrese un color:</span>
         </div>
         <ColorForm addColor={addColorHandler} />
         <hr />

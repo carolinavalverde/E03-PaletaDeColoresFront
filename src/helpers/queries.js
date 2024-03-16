@@ -1,4 +1,14 @@
+import Swal from "sweetalert2";
+
 const API_URL = import.meta.env.VITE_API_COLORES;
+
+const showErrorAlert = (message) => {
+  Swal.fire({
+    icon: "error",
+    title: "Oops...",
+    text: message,
+  });
+};
 
 export const getColors = async () => {
   try {
@@ -9,6 +19,7 @@ export const getColors = async () => {
     return response.json();
   } catch (error) {
     console.error("Error fetching colors:", error);
+    showErrorAlert("Failed to fetch colors. Please try again later.");
     return [];
   }
 };
@@ -28,6 +39,7 @@ export const addColor = async (color) => {
     return response.json();
   } catch (error) {
     console.error("Error adding color:", error);
+    showErrorAlert("Failed to add color. Please try again.");
     return null;
   }
 };
@@ -43,6 +55,7 @@ export const deleteColor = async (id) => {
     return response.json();
   } catch (error) {
     console.error("Error deleting color:", error);
+    showErrorAlert("Failed to delete color. Please try again.");
     return null;
   }
 };
@@ -62,6 +75,7 @@ export const updateColor = async (id, color) => {
     return response.json();
   } catch (error) {
     console.error("Error updating color:", error);
+    showErrorAlert("Failed to update color. Please try again.");
     return null;
   }
 };
