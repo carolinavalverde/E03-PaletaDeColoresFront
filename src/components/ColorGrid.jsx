@@ -1,4 +1,3 @@
-import React from "react";
 import ColorCard from "./ColorCard";
 
 const ColorGrid = ({ colors, deleteColor }) => {

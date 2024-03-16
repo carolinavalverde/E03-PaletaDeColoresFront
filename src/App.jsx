@@ -3,25 +3,32 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./style/App.css";
 import ColorForm from "./components/ColorForm";
 import ColorGrid from "./components/ColorGrid";
+import { getColors, addColor, deleteColor } from "./helpers/queries";
 
 const App = () => {
   const [colors, setColors] = useState([]);
 
   useEffect(() => {
-    const savedColors = JSON.parse(localStorage.getItem("colors")) || [];
-    setColors(savedColors);
+    const fetchData = async () => {
+      const data = await getColors();
+      setColors(data);
+    };
+    fetchData();
   }, []);
 
-  const addColor = (color) => {
-    const updatedColors = [...colors, color];
-    setColors(updatedColors);
-    localStorage.setItem("colors", JSON.stringify(updatedColors));
+  const updateColors = async () => {
+    const data = await getColors();
+    setColors(data);
   };
 
-  const deleteColor = (colorToDelete) => {
-    const updatedColors = colors.filter((color) => color !== colorToDelete);
-    setColors(updatedColors);
-    localStorage.setItem("colors", JSON.stringify(updatedColors));
+  const addColorHandler = async (color) => {
+    await addColor(color);
+    updateColors();
+  };
+
+  const deleteColorHandler = async (id) => {
+    await deleteColor(id);
+    updateColors();
   };
 
   return (
@@ -33,10 +40,10 @@ const App = () => {
         <div className="my-2">
           <span>Administrar colores</span>
         </div>
-        <ColorForm addColor={addColor} />
+        <ColorForm addColor={addColorHandler} />
         <hr />
         {colors.length > 0 ? (
-          <ColorGrid colors={colors} deleteColor={deleteColor} />
+          <ColorGrid colors={colors} deleteColor={deleteColorHandler} />
         ) : (
           <p>No hay colores guardados.</p>
         )}
