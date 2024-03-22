@@ -12,8 +12,11 @@ Diseño Responsivo: La aplicación está diseñada con Bootstrap, lo que garanti
 
 ## 3. Despliegue
 
-La aplicación ColorPalette está desplegada y disponible en: 
-https://colorpalette-06.netlify.app/
+La aplicación está desplegada y disponible en:
+https://paleta-de-colores-cv.netlify.app/
+
+El Backend se encuentra en:
+https://e04-paleta-de-colores-back.vercel.app/
 
 ## 4. Tecnologías Utilizadas
 React: Desarrollo de la interfaz de usuario modular y reactiva.
@@ -30,8 +33,7 @@ SweetAlert
 Clona el repositorio: git clone https://github.com/carolinavalverde/E03-PaletaDeColoresFront
 Navega al directorio del proyecto: cd ReactEj06
 Instala las dependencias: npm install
-Inicia la aplicación: npm start
-La aplicación estará disponible en http://localhost:3000 en tu navegador.
+Inicia la aplicación
 
 ## 6. Contribución
 Si deseas contribuir a este proyecto, sigue los pasos a continuación:
@@ -47,3 +49,5 @@ Carolina Valverde Vasile
 
 ## 8.Licencia
 Este proyecto no cuenta con licencia.
+
+## **Paleta de Colores**
